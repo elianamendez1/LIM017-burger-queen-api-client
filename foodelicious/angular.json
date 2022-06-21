@@ -30,7 +30,11 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -103,5 +107,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "21dd2ec2-0d02-44f0-a48e-e0c84f4c9a2a"
   }
 }
