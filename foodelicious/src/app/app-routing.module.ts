@@ -5,12 +5,12 @@ import { HomeComponent } from './home/home/home.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component: HomeComponent
+    path: '',
+    component: HomeComponent,
   },
   {
-    path:'login',
-    component: LoginComponent
+    path: 'login',
+    component: LoginComponent,
   },
 ];
 
