@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PeopleService } from './services/people.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'foodelicious';
+
+  constructor(
+    private peopleService: PeopleService
+  ) {
+    this.peopleService.getPeople().subscribe(resp => {
+      console.log(resp)
+    })
+  }
 }
