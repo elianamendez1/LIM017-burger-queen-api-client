@@ -13,9 +13,9 @@ import { HomeModule } from './home/home.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AuthenticationModule,
     HomeModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthenticationModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

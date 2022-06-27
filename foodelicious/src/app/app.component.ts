@@ -10,10 +10,11 @@ export class AppComponent {
   title = 'foodelicious';
 
   constructor(
-    private peopleService: PeopleService
+    // eslint-disable-next-line no-unused-vars
+    private peopleService: PeopleService,
   ) {
-    this.peopleService.getPeople().subscribe(resp => {
-      console.log(resp)
-    })
+    this.peopleService.getPeople().subscribe((resp) => {
+      console.log(resp);
+    });
   }
 }
