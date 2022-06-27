@@ -2,51 +2,20 @@
   <div class="container logo-container">
     <div class="col">
       <div class="container-img col-12">
-        <img
-          src="../../../assets/images/logotypeFoodelicious.png"
-          class="img-fluid logo"
-          alt=""
-        />
+        <img src="../../../assets/images/logotypeFoodelicious.png" class="img-fluid logo" alt=""/>
       </div>
 
-      <div class="card col-6">
-        <div class="card-body">
+      <div class="card col-6" id="login">
+        <form>
           <h3 class="title text-center">Please sign in</h3>
-          <form>
-            <div class="form-group">
-              <div class="form-floating mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="floatingInput"
-                  placeholder="name@example.com"
-                />
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="text-danger">
-                <span>The Email address <strong> is required.</strong></span>
-              </div>
-            </div>
-<br>
-            <div class="form-group">
-              <div class="form-floating mb-3">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="floatingInput"
-                  placeholder="name@example.com"
-                />
-                <label for="validationPassword" class="form-label mt-2">Password</label>
-              </div>
-              <div class="text-danger">
-                <span>The password <strong> is required.</strong></span>
-              </div>
-              <br>
-            </div>
-            <button type="submit" id="singIn" clas="col-4">Sing in</button>
-          </form>
-        </div>
+          <p>We can't sign into your account</p>
+          <label>Email address</label>
+          <input type="text" name="email" />
 
+          <label>Password</label>
+          <input type="password" name="password" />
+          <input type="submit" class="btn" value="Sing in"/>
+        </form>
       </div>
     </div>
   </div>

@@ -17,31 +17,37 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
+  /* display: flex;
+  flex-direction: column; */
+
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
 }
+form{
+padding: 50px;
+}
+/* input{
+  border-color: rgb(255, 144, 0);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+    outline: 0 none;
+} */
+
+
+// New form
 .title {
   font-size: 2em;
   color: #ff7a01;
   font-family: "Poppins", sans-serif;
 }
-/* .form-floating mb-3, input{
-  border-color: rgb(255, 144, 0);
-    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
-    outline: 0 none;
-} */
-.text-danger {
-  text-align: start;
+p {
+  color:  rgb(243, 92, 92);
+  text-align: center;
+  font-size: 16px;
+  font-weight: bolder;
 }
-#singIn {
-  border: none;
+.btn {
   padding: 5px 30px;
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  background: #ff7a01;
+  background:#ff7a01;
   color: #fff;
-  font-size: 20px;
   border-radius: 10px;
+  margin: 3% auto;
 }
