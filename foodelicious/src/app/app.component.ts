@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PeopleService } from './services/people.service';
+// import { PeopleService } from './services/people.service';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +11,10 @@ export class AppComponent {
 
   constructor(
     // eslint-disable-next-line no-unused-vars
-    private peopleService: PeopleService,
+    /* private peopleService: PeopleService */
   ) {
-    this.peopleService.getPeople().subscribe((resp) => {
+    /* this.peopleService.getPeople().subscribe((resp) => {
       console.log(resp);
-    });
+    }); */
   }
 }

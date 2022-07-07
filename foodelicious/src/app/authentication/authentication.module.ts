@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { FormComponent } from './form/form.component';
 
@@ -11,9 +11,12 @@ import { FormComponent } from './form/form.component';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   exports: [
     LoginComponent,
+    FormComponent,
   ],
 })
 export class AuthenticationModule { }

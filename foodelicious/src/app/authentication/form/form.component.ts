@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-// import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-export interface OptionsForm {
-  id: string;
-  label: string;
-}
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  FormControl,
+} from '@angular/forms';
+import { LoginI } from 'src/app/models/login.interface';
+import { PeopleService } from '../../services/people.service';
 
 @Component({
   selector: 'app-form',
@@ -12,23 +14,37 @@ export interface OptionsForm {
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
-  // authForm !: FormGroup;
+  authForm = new FormGroup({
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
+  });
+  /*   authForm !: FormGroup;
 
-  constructor() {}
-    //private readonly fb: FormBuilder) { }
-
-   ngOnInit(): void {
-    // this.initForm();
-  }
-
- /*  onSubmit(): void {
-    console.log('Saveeeed', this.authForm.value);
-  }
-
-  private initForm(): void {
+  initForm(): void {
     this.authForm = this.fb.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required],
+      email: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
     });
+  } */
+
+  constructor(
+    private api: PeopleService,
+    private readonly fb : FormBuilder,
+  ) {}
+
+  ngOnInit(): void {
+  /*   this.initForm(); */
+  //  this.onLogin(form);
+  }
+
+  onLogin(form: LoginI) {
+    console.log(form);
+    this.api.loginByEmail(form).subscribe((data) => {
+      console.log(data);
+    });
+  }
+
+  /*   onSubmit(): void {
+    console.log('Saveeeed', this.authForm.value);
   } */
 }
