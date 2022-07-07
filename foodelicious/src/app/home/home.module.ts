@@ -4,16 +4,14 @@ import { HomeComponent } from './home/home.component';
 import { OrderComponent } from './order/order.component';
 import { ListOfProductsComponent } from './list-of-products/list-of-products.component';
 
-
-
 @NgModule({
   declarations: [
     HomeComponent,
     OrderComponent,
-    ListOfProductsComponent
+    ListOfProductsComponent,
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+  ],
 })
 export class HomeModule { }
