@@ -5,7 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-// eslint-disable-next-line import/prefer-default-export
 export class HomeComponent implements OnInit {
   constructor() { }
 
