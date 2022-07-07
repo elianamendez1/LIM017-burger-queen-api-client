@@ -1,5 +1,8 @@
+// eslint-disable-next-line import/no-unresolved
 import { TestBed } from '@angular/core/testing';
+// eslint-disable-next-line import/no-unresolved
 import { RouterTestingModule } from '@angular/router/testing';
+// eslint-disable-next-line import/no-unresolved
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {

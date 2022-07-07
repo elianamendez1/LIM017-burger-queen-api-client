@@ -1,22 +1,40 @@
 <section class="loginSection">
-  <div class="container logo-container">
-    <div class="col">
-      <div class="container-img col-12">
-        <img src="../../../assets/images/logotypeFoodelicious.png" class="img-fluid logo" alt=""/>
-      </div>
+  <div class="container-img col-12">
+    <img
+      src="../../../assets/images/logotypeFoodelicious.png"
+      class="img-fluid logo"
+      alt=""
+    />
+  <div class="card col-4 color">
+    <div class="card-body">
+      <!-- <h3 class="title text-center">Please sign in</h3> -->
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+        <div class="form-group">
+          <div class="form-floating mb-3">
+            <input formControlName="email" type="email" class="form-control" placeholder="name@example.com"
+            id="floatingInputEmail" required/>
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="text-danger">
+            <span>The Email address <strong> is required.</strong></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-floating mb-3">
+            <input formControlName="password" type="password" class="form-control" placeholder="*****"
+            id="floatingInputPassword" required/>
+            <label for="validationPassword" class="form-label">Password</label>
+          </div>
+          <div class="text-danger">
+            <span>The password <strong> is required.</strong></span>
+          </div>
+        </div>
+        <div class="d-grid">
+        <button type="submit" id="singIn" class="btn btn-warning">Sing in</button>
+        </div>
+      </form>
 
-      <div class="card col-6" id="login">
-        <form>
-          <h3 class="title text-center">Please sign in</h3>
-          <p>We can't sign into your account</p>
-          <label>Email address</label>
-          <input type="text" name="email" />
-
-          <label>Password</label>
-          <input type="password" name="password" />
-          <input type="submit" class="btn" value="Sing in"/>
-        </form>
-      </div>
     </div>
   </div>
+</div>
 </section>
