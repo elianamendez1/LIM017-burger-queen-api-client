@@ -5,7 +5,7 @@
           <form [formGroup]="authForm" (ngSubmit)="onLogin(authForm.value)">
             <div class="form-group">
               <div class="form-floating mb-3">
-                <input formControlName="email" type="email" class="form-control" id="floatingInputEmail" required/>
+                <input formControlName="email" type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com" required/>
                 <label for="floatingInput">Email address</label>
               </div>
               <div class="text-danger">
@@ -14,7 +14,7 @@
             </div>
             <div class="form-group">
               <div class="form-floating mb-3">
-                <input formControlName="password" type="password" class="form-control" id="floatingInputPassword" required/>
+                <input formControlName="password" type="password" class="form-control" id="floatingInputPassword" placeholder="name@example.com" required/>
                 <label for="validationPassword" class="form-label">Password</label>
               </div>
               <div class="text-danger">
