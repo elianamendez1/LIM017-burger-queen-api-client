@@ -7,10 +7,15 @@ import { ResponseI } from '../../models/authentication/response.interface';
 @Injectable({
   providedIn: 'root',
 })
+
 export class LoginService {
   url: string = 'http://localhost:8080/login';
 
-  constructor(private http: HttpClient) {}
+  headersssss = new Headers();
+  constructor(private http: HttpClient,private headers: HttpHeaders) {
+    this.headersssss.append('Content-Type', 'application/json');
+    this.headersssss.append('Authorization', 'application/json');
+  }
 
   loginByEmail(form: LoginI):Observable<ResponseI> {
     const addressEmail = `${this.url}`;
