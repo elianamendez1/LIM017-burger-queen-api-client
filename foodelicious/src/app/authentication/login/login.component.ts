@@ -22,17 +22,26 @@ export class LoginComponent implements OnInit {
     private router: Router,
     ) {}
 
+  ok:boolean = false;
+
+  errorMsg = '';
+
   ngOnInit(): void {
   }
 
   onLogin(form:LoginI) {
     this.api.loginByEmail(form).subscribe((data) => {
       const dataResponse:ResponseI = data;
-      console.log('soyy dataaaaaa', data);
-      if (dataResponse.accessToken === 'accessToken') {
-        // eslint-disable-next-line no-undef
-        localStorage.setItem('accessToken', dataResponse.accessToken);
+      debugger
+      console.log('soooy dataaaaa', dataResponse);
+      if (dataResponse.accessToken !== undefined) {
+        sessionStorage.setItem('accessToken', dataResponse.accessToken);
         this.router.navigate(['home']);
+      } else {
+        debugger
+        this.ok = true;
+        this.errorMsg = dataResponse.error;
+        console.log('soooy el error', dataResponse.error);
       }
     });
   }

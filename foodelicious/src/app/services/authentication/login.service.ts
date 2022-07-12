@@ -11,10 +11,10 @@ import { ResponseI } from '../../models/authentication/response.interface';
 export class LoginService {
   url: string = 'http://localhost:8080/login';
 
-  headersssss = new Headers();
-  constructor(private http: HttpClient,private headers: HttpHeaders) {
-    this.headersssss.append('Content-Type', 'application/json');
-    this.headersssss.append('Authorization', 'application/json');
+  /* headersssss = new Headers(); */
+  constructor(private http: HttpClient) {
+   /*  this.headersssss.append('Content-Type', 'application/json');
+    this.headersssss.append('Authorization', 'application/json'); */
   }
 
   loginByEmail(form: LoginI):Observable<ResponseI> {
